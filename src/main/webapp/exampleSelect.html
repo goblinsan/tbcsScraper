@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <title>Mobile TBCS Team Select</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-brand">Mobile TBCS Schedule Viewer</div>
+        </div>
+    </div>
+</nav>
+<div class="container" style="margin-top:60px">
+    <h2 class="sub-header">Find Your Team</h2>
+    <form class="form" action="/selectTeam" id="leagueSearch">
+        <div class="container">
+            <div class="row" >
+                <div style="padding-left:0px">
+                    <div class="short-div" style="padding-bottom:15px">
+                        <select class="form-control" id="sportSelect">
+                            <option value="" disabled selected>Select Sport</option>
+                            <option value="Soccer">Soccer</option>
+                            <option value="Basketball">Basketball</option>
+                            <option value="Softball">Softball</option>
+                            <option value="Kickball">Kickball</option>
+                            <option value="Bowling">Bowling</option>
+                            <option value="Cornhole">Cornhole</option>
+                            <option value="Football">Football</option>
+                            <option value="Golf">Golf</option>
+                            <option value="Tennis">Tennis</option>
+                        </select>
+                    </div>
+                    <div class="short-div">
+                        <select class="form-control" id="daySelect">
+                            <option value="" disabled selected>Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <h2 class="sub-header">Select Your League</h2>
+    <form class="form" action="/selectTeam" id="leagueSelect" method="post">
+        <div class="container">
+            <div class="row" >
+                <div style="padding-left:0px">
+                    <select name="LEAGUESELECT" class="form-control" id="leagueSearchResult"></select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <h2 class="sub-header">Select Your Team</h2>
+    <form class="form" action="/printSchedule" id="teamSelect" method="post">
+        <div class="container">
+            <div class="row" >
+                <div style="padding-left:0px">
+                    <select name="TEAMSELECT" class="form-control" id="teamSearchResult"></select>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+
+<script src="/js/ajaxSubmit.js"></script>
+</div>
+</body>
+</html>
