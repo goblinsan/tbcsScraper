@@ -1,15 +1,16 @@
 package mobileTbcs.core;
 
-import org.joda.time.DateTime;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.joda.time.DateTime;
 
 public class Game implements Comparable {
     String location;
     List<Team> teams = new ArrayList<Team>();
     DateTime dateTime;
     Team opponent;
+    //Hey dad
 
     @Override
     public int compareTo(Object o) {
